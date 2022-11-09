@@ -39,8 +39,8 @@ function numeroForMaiorOuMenorQueOValorPermitido(numero){
     return numero > maiorValor || numero < menorValor
 }
 
-const jogarNovamente = document.getElementById('jogar-novamente');
-
-jogarNovamente.addEventListener('click', () => {
-    window.location.reload();
+document.body.addEventListener('click', e => {
+    if(e.target.id == 'jogar-novamente') {
+        window.location.reload();
+    }
 })
